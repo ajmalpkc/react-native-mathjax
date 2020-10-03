@@ -26,6 +26,8 @@ class MathJax extends React.Component {
 			Object.assign({}, defaultOptions, this.props.mathJaxOptions)
 		);
 
+		const fontSize = this.props.fontSize ? this.props.fontSize : '18px';
+
 		return `
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 			<script type="text/x-mathjax-config">
@@ -39,7 +41,7 @@ class MathJax extends React.Component {
 			</script>
 
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
-			<div id="formula" style="visibility: hidden;">
+			<div id="formula" style="visibility: hidden;font-size:${fontSize};">
 				${content}
 			</div>
 		`;
@@ -55,6 +57,7 @@ class MathJax extends React.Component {
 				<AutoHeightWebView
 					scrollEnabled={false}
 					source={{ html }}
+					androidHardwareAccelerationDisabled
 					{...props}
 				/>
 			</View>

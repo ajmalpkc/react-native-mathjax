@@ -1,17 +1,25 @@
 # react-native-mathjax
 Render Mathjax content in React Native Webview with auto height adjustment.
 
+Added react-native-autoheight-webview to replace webview.
+
+WebView prop androidHardwareAccelerationDisabled is true by default (To prevent Crash when using multiple MathJax in single screen).
+
 # Showcase
 TODO
 
 # Installation
-1. `yarn add react-native-mathjax` or `npm install react-native-mathjax --save`
+`yarn add https://github.com/ajmalpkc/react-native-mathjax.git`
+or
+`npm install ajmalpkc/react-native-mathjax#master --save`
 
 # Usage
 ```javascript
 <MathJax
   // HTML content with MathJax support
   html={'$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$<br><p>This is an equation</p>'}
+  // Font size inside html
+  fontSize="20px"
   // MathJax config option
   mathJaxOptions={{
     messageStyle: 'none',
