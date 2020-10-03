@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/calvinkei/react-native-mathjax/issues"
   },
-  "homepage": "https://github.com/calvinkei/react-native-mathjax#readme"
+  "homepage": "https://github.com/calvinkei/react-native-mathjax#readme",
+  "dependencies": {
+    "react-native-autoheight-webview": "^1.5.4"
+  }
 }
