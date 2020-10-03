@@ -3,8 +3,6 @@ Render Mathjax content in React Native Webview with auto height adjustment.
 
 Added react-native-autoheight-webview to replace webview.
 
-WebView prop androidHardwareAccelerationDisabled is true by default (To prevent Crash when using multiple MathJax in single screen).
-
 # Showcase
 TODO
 

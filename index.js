@@ -53,11 +53,13 @@ class MathJax extends React.Component {
 		const props = Object.assign({}, this.props, { html: undefined });
 
 		return (
-			<View style={{ ...props.style }}>
+			<View style={{ ...props.style, overflow: 'hidden' }}>
 				<AutoHeightWebView
 					scrollEnabled={false}
 					source={{ html }}
-					androidHardwareAccelerationDisabled
+					style={{
+						opacity: 0.99
+					}}
 					{...props}
 				/>
 			</View>
